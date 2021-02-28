@@ -1,0 +1,29 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 2em 1em;
+  color: white;
+}
+.navbar .logo {
+  position: absolute;
+  left: 1.5em;
+  top: 1.5em;
+  width: 3rem;
+}
+.nav-links {
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+
+  flex-direction: row;
+  flex-basis: 50%;
+  flex: 0 1 auto;
+}
+.nav-links > li {
+  padding: 0em 1em;
+  text-decoration: none;
+  display:inline;
+}

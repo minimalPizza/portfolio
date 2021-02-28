@@ -1,11 +1,21 @@
-import React { component } from 'react';
+import React, { component } from 'react';
+import './Navbar.css';
+import Logo from './logo.svg';
 
-class Navbar extends React.Component {
+export class Navbar extends React.Component {
   render() {
     return(
-      <nav>
-        
+      <nav className="navbar">
+        <img src={Logo} className="logo"/>
+
+        <ul className="nav-links">
+          <li><b>My Work</b></li>
+          <li><b>About</b></li>
+          <li><b>Contact</b></li>
+        </ul>
       </nav>
     )
   }
 }
+
+export default Navbar

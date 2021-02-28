@@ -1,10 +1,13 @@
+import React from 'react';
+import Navbar from './components/navbar/Navbar';
+import HeaderImage from './components/header-image/HeaderImage'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-    <h1>Hello</h1>
-    <h2>Testing...</h2>
+      <Navbar />
+      <HeaderImage />
     </div>
   );
 }
