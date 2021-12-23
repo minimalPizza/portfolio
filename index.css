@@ -49,6 +49,9 @@ p {
 a {
   font-weight: 600;
 }
+b {
+  font-weight: 900;
+}
 button {
   border: 7px var(--verbage-red) solid;
   border-radius: 2px;
@@ -89,12 +92,15 @@ button {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+.full-width{
+  width: 100%;
+}
 .max-width-lg {
   max-width: 75rem;
   justify-content: center;
 }
-.full-width{
-  width: 100%;
+.max-width-md {
+  max-width: 50rem;
 }
 .pos-abs {
   position: absolute;
@@ -177,7 +183,9 @@ a:hover {
   max-height: 730px
 }
 .header-image.page {
-  height: 40vh;
+  margin-top: 4em;
+  height: auto;
+  min-height: 25em;
 }
 .header-text {
   position: absolute;
@@ -188,7 +196,7 @@ a:hover {
 }
 .header-text .title {
   margin-top: 0;
-  margin-bottom: .2em;
+  margin-bottom: .4em;
   font-size: 2.7em;
   font-weight: 900;
 }
@@ -228,7 +236,6 @@ a:hover {
   top: 68px;
   max-width: 7em;
 }
-
 @media screen and (min-width: 768px) {
   .header-text {
     font-size: 1.6em;
@@ -296,6 +303,9 @@ input:checked + .slider:before {
 
 .margin-bottom {
   margin-bottom: 1em;
+}
+.margin-auto {
+  margin: 0 auto;
 }
 /* SVG */
 .cls-2{fill:#47d5fc}
