@@ -1,4 +1,5 @@
-
+//Animation
+/*
 var pizza_anim = document.getElementById('minimal-pizza');
 var animation = bodymovin.loadAnimation({
   container: document.getElementById('bm'),
@@ -19,3 +20,11 @@ pizza_anim.addEventListener('mouseenter', function() {
 animation.addEventListener('complete', function(){
   isComplete = true;
 })
+*/
+//Dark Mode
+var container = document.getElementsByClassName('container')[0];
+
+document.getElementById('toggler').addEventListener('change', (event) => {
+  console.log(toggler)
+  event.target.checked ? container.setAttribute('data-theme', 'default') : container.setAttribute('data-theme', 'dark');
+});
