@@ -8,7 +8,7 @@
   --box-shadow: #d0d0d0;
 }
 [data-theme="dark"] {
-  --light-gray: #707070;
+  --light-gray: #8f969a;
   --playful-blue: #47d5fc;
   --verbage-red: #FF5A5A;
   --background-color: #08162c;
@@ -173,6 +173,10 @@ a:hover {
 .header-image {
   position: relative;
   height: 95vh;
+  min-height: 600px;
+}
+.header-image.page {
+  height: 40vh;
 }
 .header-text {
   position: absolute;
@@ -182,9 +186,13 @@ a:hover {
   transform: translateX(-50%);
 }
 .header-text .title {
+  margin-top: 0;
   margin-bottom: .2em;
   font-size: 2.7em;
   font-weight: 900;
+}
+.page .title {
+  font-size: 2.3em;
 }
 .header-text span {
   display: inline-block;
