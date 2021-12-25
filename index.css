@@ -1,16 +1,17 @@
 :root, [data-theme="default"] {
-  --light-gray: #707070;
+  --light-gray: #6a7485c7;
   --playful-blue: #47d5fc;
   --verbage-red: #FF5A5A;
-
+  --bubble-fill: #ffffff;
   --text-color: #222222;
   --background-color: #ffffff;
   --box-shadow: #d0d0d0;
 }
 [data-theme="dark"] {
   --light-gray: #8f969a;
-  --playful-blue: #47d5fc;
-  --verbage-red: #FF5A5A;
+  --playful-blue: rgba(71,213,252,.85);
+  --bubble-fill: #0e274e;
+  --verbage-red: #ee6161;
   --background-color: #08162c;
   --text-color: #f2f2f2;
   --box-shadow: #000000;
@@ -151,9 +152,11 @@ button {
   padding: 2em;
 }
 a:hover {
-  color: #f1531a !important;
-  border-bottom: 2px solid;
+  color: var(--verbage-red) !important;
   cursor: pointer;
+}
+nav a:hover {
+  border-bottom: 2px solid var(--verbage-red);
 }
 
 /* components */
@@ -167,6 +170,9 @@ a:hover {
 }
 .card:hover img {
   box-shadow: 9px 10px 0px #FFED05;
+}
+.card p {
+  line-height: 1.2rem;
 }
 .border-rounded-sm {
   border-radius: 11px;
@@ -212,7 +218,7 @@ a:hover {
 .header-image {
   margin-top: 4em;
   position: relative;
-  height: 95vh;
+  height: 90vh;
   min-height: 37.5em;
   max-height: 45.6em;
 }
@@ -260,18 +266,71 @@ a:hover {
   bottom: 0;
   max-width: 300px;
 }
+.blue-bubble-color {
+  stroke: var(--playful-blue);
+  fill: var(--bubble-fill);
+}
+.blue-bubble-shadow {
+  opacity: .8;
+}
 .red-bubble {
   position: absolute;
   left: 0;
   bottom: 0;
   max-width: 300px;
 }
+.red-bubble-color {
+  stroke: var(--verbage-red);
+  fill: var(--bubble-fill);
+}
+.red-bubble-shadow {
+  opacity: .8;
+}
 .math {
   max-width: 7em;
+}
+@media screen and (min-width: 528px) {
+  .math {
+    max-width: 9em;
+  }
+  .header-text {
+    font-size: 1.3em;
+  }
+  .header-text .subtitle {
+    font-size: 1em;
+  }
+  .blue-bubble {
+    max-width: 25em;
+  }
+  .red-bubble {
+    max-width: 25em;
+  }
+  .transform-left, .transform-right {
+    transform: translateX(-1em);
+    transform-origin: bottom right;
+  }
+  .transform-right {
+    transform: translateX(1em);
+    transform-origin: bottom left;
+  }
 }
 @media screen and (min-width: 768px) {
   .header-text {
     font-size: 1.6em;
+  }
+  .blue-bubble {
+    max-width: 28em;
+  }
+  .red-bubble {
+    max-width: 28em;
+  }
+  .transform-left, .transform-right {
+    transform: translateX(-2em);
+    transform-origin: bottom right;
+  }
+  .transform-right {
+    transform: translate(2em, -2em);
+    transform-origin: bottom left;
   }
 }
 /* Toggle component */
@@ -290,6 +349,13 @@ a:hover {
   opacity: 0;
   width: 0;
   height: 0;
+}
+.switch::before {
+  content: url(images/sun.svg);
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--filter-invert);
+  transform: scale(1) translateX(-3em);
 }
 .slider {
   position: absolute;
