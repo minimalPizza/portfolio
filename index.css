@@ -24,6 +24,14 @@ html, body {
   background-color: var(--background-color);
   font-family: 'Lato', sans-serif;
 }
+ul.content-list li {
+  margin-bottom: 1em;
+  line-height: 1.3rem
+}
+img {
+  width: 100%;
+  object-fit: cover;
+}
 h1,h2,h3,h4,h5,h6,p, a {
   color: var(--text-color);
 }
@@ -31,7 +39,8 @@ h1 {
   font-size: 2.5rem;
 }
 h2 {
-  font-size: 2.1rem;
+  font-size: 1.9rem;
+  margin: 0.2rem 0;
 }
 h3 {
   font-size: 1.7rem;
@@ -44,13 +53,29 @@ h5 {
   font-size: 1.0rem;
 }
 p {
-  font-size: 1.36rem;
+  margin: 0;
+  font-size: 1.16rem;
+  line-height: 1.8rem;
 }
 a {
   font-weight: 600;
 }
+a.external-link {
+  white-space: nowrap;
+}
+a.external-link:after {
+  content: url(images/open-in-new.svg);
+  display: inline-block;
+  vertical-align: middle;
+  transform: scale(.7);
+}
 b {
   font-weight: 900;
+}
+@media screen and (min-width: 528px) {
+  p {
+    font-size: 1.2rem;
+  }
 }
 button {
   border: 7px var(--verbage-red) solid;
@@ -65,6 +90,13 @@ button {
   font-weight: 600;
 }
 .caption {
+  font-size: .8rem;
+  line-height: 18px;
+  margin-top: -3px;
+  padding: 1em;
+  background-color: #ededed;
+}
+.subtitle {
   margin: .4rem 0;
   font-size: 1.0rem;
   color: var(--light-gray);
@@ -100,7 +132,7 @@ button {
   justify-content: center;
 }
 .max-width-md {
-  max-width: 50rem;
+  max-width: 45rem;
 }
 .pos-abs {
   position: absolute;
@@ -139,9 +171,10 @@ a:hover {
 .border-rounded-sm {
   border-radius: 11px;
 }
-.circle {
-  border-radius: 50%;
-  border: white 6px solid;
+
+.body-images-2 {
+  width: 100%;
+  max-width: 340px;
 }
 
 /* navigation */
@@ -177,19 +210,19 @@ a:hover {
 
 /* hero component */
 .header-image {
+  margin-top: 4em;
   position: relative;
   height: 95vh;
-  min-height: 600px;
-  max-height: 730px
+  min-height: 37.5em;
+  max-height: 45.6em;
 }
 .header-image.page {
-  margin-top: 4em;
   height: auto;
-  min-height: 25em;
+  min-height: 19em;
 }
 .header-text {
   position: absolute;
-  top: 7rem;
+  top: 5rem;
   left: 50%;
   text-align: center;
   transform: translateX(-50%);
@@ -207,6 +240,7 @@ a:hover {
   display: inline-block;
   height: 1.25em;
   border-bottom: .1em solid var(--playful-blue);
+  white-space: nowrap;
 }
 .header-text .subtitle {
   margin: .53em 0 2em 0;
@@ -233,7 +267,6 @@ a:hover {
   max-width: 300px;
 }
 .math {
-  top: 68px;
   max-width: 7em;
 }
 @media screen and (min-width: 768px) {
@@ -300,9 +333,14 @@ input:checked + .slider:before {
   border-radius: 50%;
   background-color: white;
 }
-
 .margin-bottom {
   margin-bottom: 1em;
+}
+.margin-bottom-md {
+  margin-bottom: 2em;
+}
+.margin-bottom-lg {
+  margin-bottom: 4em;
 }
 .margin-auto {
   margin: 0 auto;
