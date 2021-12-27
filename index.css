@@ -473,13 +473,15 @@ input:checked + .slider:before {
   display: none;
 }
 /* animations */
-.blue-bubble-anim:hover .blue-bubble-color {
+.bubble-anim:hover .blue-bubble-color,
+.bubble-anim:hover .red-bubble-color {
   animation-name: translate-up;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
-.blue-bubble-anim:hover .blue-bubble-shadow {
+.bubble-anim:hover .blue-bubble-shadow,
+.bubble-anim:hover .red-bubble-shadow {
   animation-name: translate-up;
   animation-delay: 50ms;
   animation-duration: 2s;
