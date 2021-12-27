@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>John Dinwiddie</title>
-    <link rel="stylesheet" href="index.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="index.css" media="all" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" media="print" onload="this.media='all'">
   </head>
   <body class="container default" data-theme="default">
@@ -41,6 +41,12 @@
       </section>
       <section class="content-flex p-1">
         <div class="max-width-md full-width">
+          <div class="controller-row margin-bottom">
+            <label class="switch">
+              <input id="themeSwitch" type="checkbox" checked>
+              <span class="slider round"></span>
+            </label>
+          </div>
           <picture>
             <source media="(min-width:728px)" srcset="images/arj-mockup-720x440.png" width="720" height="440">
             <img src="images/arj-mockup-528x323.png" alt="Mockup of Answers Research Journal" width="528" height="323">
@@ -68,4 +74,5 @@
         </div>
       </section>
     </body>
+    <script src="index.js"></script>
 </html>
